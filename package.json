@@ -1,0 +1,45 @@
+{
+  "name": "qa-playwright-cucumber-ts",
+  "version": "1.0.0",
+  "description": "Suite de automatización E2E basada en Playwright, Cucumber JS, TypeScript estricto y Page Object Model (POM)",
+  "private": true,
+  "scripts": {
+    "test": "cucumber-js --profile default",
+    "test:smoke": "cucumber-js --profile smoke",
+    "test:regression": "cucumber-js --profile regression",
+    "test:dry": "cucumber-js --profile dry",
+    "test:desa": "cross-env TEST_ENV=desa cucumber-js --profile default",
+    "test:test": "cross-env TEST_ENV=test cucumber-js --profile default",
+    "test:pre": "cross-env TEST_ENV=pre cucumber-js --profile default",
+    "test:prod": "cross-env TEST_ENV=prod cucumber-js --profile smoke",
+    "test:chromium": "cross-env BROWSER=chromium cucumber-js --profile default",
+    "test:firefox": "cross-env BROWSER=firefox cucumber-js --profile default",
+    "test:webkit": "cross-env BROWSER=webkit cucumber-js --profile default",
+    "test:headed": "cross-env HEADLESS=false cucumber-js --profile default",
+    "report": "ts-node src/reporters/generate-html-report.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.{ts,md}\" \".agents/**/*.{json,md}\" \"*.{json,md,js,mjs}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,md}\" \".agents/**/*.{json,md}\" \"*.{json,md,js,mjs}\"",
+    "browsers:install": "playwright install"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@eslint/js": "^9.19.0",
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.10.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "multiple-cucumber-html-reporter": "^3.9.0",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.22.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

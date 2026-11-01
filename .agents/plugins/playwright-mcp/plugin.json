@@ -1,0 +1,4 @@
+{
+  "name": "qa-playwright-mcp",
+  "description": "Integración del servidor oficial Playwright MCP (@playwright/mcp) para inspeccionar el DOM real y extraer localizadores accesibles resilientes (getByRole, getByLabel, getByTestId) sin asunciones."
+}

@@ -1,0 +1,25 @@
+# Dependencias
+node_modules/
+
+# Compilación
+dist/
+*.tsbuildinfo
+
+# Reportes y artefactos de ejecución
+reports/*
+!reports/.gitkeep
+test-results/
+playwright-report/
+*.zip
+
+# Logs
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example

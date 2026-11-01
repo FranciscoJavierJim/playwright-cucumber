@@ -1,0 +1,17 @@
+{
+  "single-agent-guard": {
+    "PreToolUse": [
+      {
+        "matcher": "^(invoke_subagent|define_subagent)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/deny-subagents.cjs",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
+
