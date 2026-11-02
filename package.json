@@ -5,9 +5,6 @@
   "private": true,
   "scripts": {
     "test": "cucumber-js --profile default",
-    "test:smoke": "cucumber-js --profile smoke",
-    "test:regression": "cucumber-js --profile regression",
-    "test:dry": "cucumber-js --profile dry",
     "test:desa": "cross-env TEST_ENV=desa cucumber-js --profile default",
     "test:test": "cross-env TEST_ENV=test cucumber-js --profile default",
     "test:pre": "cross-env TEST_ENV=pre cucumber-js --profile default",
@@ -27,7 +24,7 @@
   "devDependencies": {
     "@cucumber/cucumber": "^11.2.0",
     "@eslint/js": "^9.19.0",
-    "@playwright/test": "^1.50.0",
+    "@playwright/test": "^1.64.1",
     "@types/node": "^22.10.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",

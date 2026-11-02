@@ -1,6 +1,5 @@
 import { Locator, Page } from '@playwright/test';
 import { CredentialsData } from '../types/environment.types';
-import { BasePage } from './base.page';
 
 /**
  * Page Object plantilla para la vista de Inicio de Sesión.
@@ -11,8 +10,8 @@ import { BasePage } from './base.page';
  *
  * Adapta las etiquetas accesibles o testIds de este archivo a los contratos reales de tu aplicación (AUT).
  */
-export class LoginPage extends BasePage {
-
+export class LoginPage {
+  private readonly page: Page;
   public readonly usernameInput: Locator;
   public readonly passwordInput: Locator;
   public readonly submitButton: Locator;
@@ -20,16 +19,12 @@ export class LoginPage extends BasePage {
   public readonly dashboardHeading: Locator;
 
   constructor(page: Page) {
-    super(page);
+    this.page = page;
     this.usernameInput = this.page.getByLabel('Usuario');
     this.passwordInput = this.page.getByLabel('Contraseña');
     this.submitButton = this.page.getByRole('button', { name: 'Iniciar sesión' });
     this.errorAlert = this.page.getByRole('alert');
     this.dashboardHeading = this.page.getByTestId('dashboard-heading');
-  }
-
-  public async open(): Promise<void> {
-    await this.navigateTo("");
   }
 
   public async enterUsername(username: string): Promise<void> {
