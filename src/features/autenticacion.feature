@@ -20,7 +20,7 @@ Feature: Autenticación de usuarios
     When El usuario introduce el usuario "<usuario>" y la contraseña "<contraseña>" en el formulario de inicio de sesión
     And El usuario envía el formulario de inicio de sesión
     Then Se muestra el mensaje de error "<mensaje_esperado>"
-
+//comentario
     Examples: Combinaciones de credenciales inválidas
       | usuario                | contraseña | mensaje_esperado                         |
       |                        |            | Please fill out Username and Password.   |
