@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv';
 import { BrowserName, EnvironmentConfig, TargetEnvironment } from '../types/environment.types';
 
 function parseTargetEnvironment(rawValue: string | undefined): TargetEnvironment {
-  const normalized = (rawValue ?? 'desa').trim().toLowerCase();
+  const normalized = (rawValue ?? 'test').trim().toLowerCase();
   if (
     normalized === 'desa' ||
     normalized === 'test' ||
